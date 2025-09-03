@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upscale Fish Monsey - Premium Fresh Fish Market</title>
+    <meta name="description" content="Upscale Fish Monsey - Premium fresh fish market. Order online for pickup or delivery. Sign up for SMS notifications and exclusive deals.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgMTZDNCA5LjM3MjU4IDkuMzcyNTggNCA1NiA0VjRDMjIuNjI3NCA0IDI4IDkuMzcyNTggMjggMTZWMTZDMjggMjIuNjI3NCAyMi42Mjc0IDI4IDE2IDI4VjI4QzkuMzcyNTggMjggNCAyMi42Mjc0IDQgMTZWMTZaIiBmaWxsPSIjRkY5NTAwIi8+CjxwYXRoIGQ9Ik0xMCAxNkMxMCAxMi42ODYzIDEyLjY4NjMgMTAgMTYgMTBIMjBDMjEuMTA0NiAxMCAyMiAxMC44OTU0IDIyIDEyVjIwQzIyIDIxLjEwNDYgMjEuMTA0NiAyMiAyMCAyMkgxNkMxMi42ODYzIDIyIDEwIDE5LjMxMzcgMTAgMTZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #FF9500 0%, #00B4A6 50%, #0EA5E9 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FF9500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.02em;
+        }
+        
+        .logo::before {
+            content: "";
+            font-size: 2.8rem;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+        
+        .nav-links a:hover {
+            color: #FF9500;
+            background: rgba(255, 149, 0, 0.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 36px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.35);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* SMS Signup Section */
+        .sms-signup {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 5rem 0;
+            margin: 4rem 0;
+            border-radius: 32px;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sms-signup::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 149, 0, 0.05) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .sms-form {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .sms-form h2 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .sms-form > p {
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            text-align: left;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #1a1a1a;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #FF9500;
+            box-shadow: 0 0 0 4px rgba(255, 149, 0, 0.1);
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+        }
+        
+        .form-group input::placeholder {
+            color: #9ca3af;
+        }
+        
+        /* Interest Options Styling */
+        .interests-section {
+            text-align: left;
+            margin: 2rem 0;
+        }
+        
+        .interests-section > label {
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+        
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .interest-option {
+            position: relative;
+        }
+        
+        .interest-option input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .interest-option label {
+            display: block;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin-bottom: 0;
+        }
+        
+        .interest-option input[type="checkbox"]:checked + label {
+            background: rgba(255, 149, 0, 0.15);
+            border-color: #FF9500;
+            color: #FF9500;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(255, 149, 0, 0.2);
+        }
+        
+        .interest-option label:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .interest-option input[type="checkbox"]:checked + label:hover {
+            background: rgba(255, 149, 0, 0.2);
+        }
+        
+        .checkbox-section {
+            text-align: left;
+            margin: 2.5rem 0;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 1.5rem;
+            padding: 20px;
+            background: rgba(255, 149, 0, 0.05);
+            border: 2px solid rgba(255, 149, 0, 0.1);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .checkbox-group:hover {
+            background: rgba(255, 149, 0, 0.08);
+            border-color: rgba(255, 149, 0, 0.2);
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 4px;
+            transform: scale(1.3);
+            accent-color: #FF9500;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            cursor: pointer;
+            color: #374151;
+            margin-bottom: 0;
+        }
+        
+        .checkbox-group a {
+            color: #FF9500;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .checkbox-group a:hover {
+            text-decoration: underline;
+            color: #e8890b;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #FF9500, #00B4A6);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 40px rgba(255, 149, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 60px rgba(255, 149, 0, 0.4);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            transform: none;
+            cursor: not-allowed;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .features h2 {
+            color: white;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            margin-bottom: 4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FF9500, #00B4A6);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-card h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: #FF9500;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 1.8;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #FF9500;
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-top: 1.5rem;
+            display: none;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+        }
+        
+        .error-message {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-top: 1.5rem;
+            display: none;
+            box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero {
+                padding: 4rem 0;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .sms-form {
+                padding: 0 1rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .checkbox-group {
+                padding: 16px;
+            }
+            
+            .interests-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .interest-option label {
+                padding: 14px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Loading spinner */
+        .loading {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Glass morphism enhancement */
+        @supports (backdrop-filter: blur(20px)) {
+            .glass {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Upscale Fish</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#signup">SMS Alerts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <h1>Premium Fresh Fish</h1>
+                <p>Experience the finest quality fish  in Spring Valley. Fresh daily catches, expert preparation, and exceptional service.</p>
+                <div class="cta-buttons">
+                    <a href="https://www.upscalefishmarket.com/" class="btn btn-primary" target="_blank" rel="noopener">
+                        🛒 Order Online Now
+                    </a>
+                </div>
+            </div>
+        </section>
+		
+		<section class="features fade-in">
+            <h2>Why Choose Upscale Fish?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎣</div>
+                    <h3>Daily Fresh Catches</h3>
+                    <p>We source the freshest fish daily from trusted suppliers to ensure premium quality and taste that exceeds expectations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Expert Preparation</h3>
+                    <p>Our skilled team prepares your fish exactly how you like it - cleaned, filleted, or ready to cook with professional precision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Convenient Ordering</h3>
+                    <p>Order online for easy pickup or delivery. Get instant notifications when your favorite items are back in stock.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup" class="sms-signup fade-in">
+            <div class="sms-form">
+                <h2>Stay Fresh with SMS Updates</h2>
+                <p>Get exclusive deals, daily catch updates, and special offers delivered straight to your phone!</p>
+                
+                <form id="smsSignupForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="interests-section">
+                        <label>What interests you most? (Select all that apply)</label>
+                        <div class="interests-grid">
+                            <div class="interest-option">
+                                <input type="checkbox" id="daily-specials" name="interests" value="daily-specials">
+                                <label for="daily-specials">🍽️ Daily Specials</label>
+                            </div>
+                            <div class="interest-option">
+                                <input type="checkbox" id="fresh-catches" name="interests" value="fresh-catches">
+                                <label for="fresh-catches">🎣 Fresh Catches</label>
+                            </div>
+                            <div class="interest-option">
+                                <input type="checkbox" id="seasonal-items" name="interests" value="seasonal-items">
+                                <label for="seasonal-items">🌊 Seasonal Items</label>
+                            </div>
+                            <div class="interest-option">
+                                <input type="checkbox" id="cooking-tips" name="interests" value="cooking-tips">
+                                <label for="cooking-tips">👨‍🍳 Cooking Tips</label>
+                            </div>
+                            <div class="interest-option">
+                                <input type="checkbox" id="delivery-notifications" name="interests" value="delivery-notifications">
+                                <label for="delivery-notifications">🚚 Delivery Notifications</label>
+                            </div>
+                            <div class="interest-option">
+                                <input type="checkbox" id="all-updates" name="interests" value="all-updates">
+                                <label for="all-updates">📱 All Updates</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-section">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="smsConsent" name="smsConsent" required>
+                            <label for="smsConsent">
+                                <strong>SMS Consent Required:</strong> By checking this box, I consent to receive promotional and transactional SMS messages from Upscale Fish Monsey. Message frequency may vary. Message and data rates may apply. Reply STOP to opt-out at any time. Reply HELP for help. 
+                                <a href="https://www.upscalefishmarket.com/policy/termsConditions" target="_blank">Terms & Conditions</a> and 
+                                <a href="https://www.upscalefishmarket.com/policy/privacyPolicy" target="_blank">Privacy Policy</a> apply.
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-group" style="background: rgba(0, 180, 166, 0.05); border-color: rgba(0, 180, 166, 0.1);">
+                            <input type="checkbox" id="marketingConsent" name="marketingConsent">
+                            <label for="marketingConsent">
+                                I would also like to receive marketing emails and promotional offers (optional)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">🎣 Join SMS Alerts</span>
+                        <span class="btn-loading" style="display: none;"><span class="loading"></span> Processing...</span>
+                    </button>
+                </form>
+                
+                <div id="successMessage" class="success-message">
+                    ✅ <strong>Welcome aboard!</strong> You've been successfully signed up for SMS alerts. You should receive a confirmation message shortly.
+                </div>
+                
+                <div id="errorMessage" class="error-message">
+                    ❌ <strong>Oops!</strong> There was an issue with your signup. Please check your information and try again.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 126 Maple Ave #7, Spring Valley, NY 10977</p>
+                    <p>📞 Phone: (845) 352-2555</p>
+                    <p>✉️ Email: orders@upscalefishmarket.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="https://www.upscalefishmarket.com/" target="_blank">Order Online</a></p>
+                    <p><a href="/privacy" target="_blank">Privacy Policy</a></p>
+                    <p><a href="terms" target="_blank">Terms & Conditions</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>SMS Information</h3>
+                    <p>Text STOP to opt-out</p>
+                    <p>Text HELP for support</p>
+                    <p>Message rates may apply</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 3rem;">
+                <p>&copy; 2025 Upscale Fish Monsey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation and submission
+        document.getElementById('smsSignupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Reset messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            // Basic validation
+            const firstName = form.firstName.value.trim();
+            const phone = form.phone.value.trim();
+            const smsConsent = form.smsConsent.checked;
+            
+            if (!firstName) {
+                showError('Please enter your first name');
+                return;
+            }
+            
+            if (!phone) {
+                showError('Please enter your phone number');
+                return;
+            }
+            
+            // Phone number validation (basic)
+            const cleanPhone = phone.replace(/\D/g, '');
+            if (cleanPhone.length < 10) {
+                showError('Please enter a valid phone number');
+                return;
+            }
+            
+            if (!smsConsent) {
+                showError('SMS consent is required to receive text messages');
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            
+            // Simulate form submission (in real implementation, this would send to your backend)
+            setTimeout(() => {
+                // Reset loading state
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                
+                // Show success message
+                successMsg.style.display = 'block';
+                form.reset();
+                
+                // Scroll to success message
+                successMsg.scrollIntoView({ behavior: 'smooth' });
+                
+                // Get selected interests
+                const selectedInterests = Array.from(form.querySelectorAll('input[name="interests"]:checked')).map(cb => cb.value);
+                
+                // In a real implementation, you would send this data to your SMS service provider
+                console.log('SMS Signup Data:', {
+                    firstName: firstName,
+                    lastName: form.lastName.value.trim(),
+                    phone: cleanPhone,
+                    email: form.email.value.trim(),
+                    interests: selectedInterests,
+                    marketingConsent: form.marketingConsent.checked,
+                    timestamp: new Date().toISOString(),
+                    source: 'upscalefishmonsey.com'
+                });
+            }, 2000);
+            
+            function showError(message) {
+                errorMsg.textContent = '❌ ' + message;
+                errorMsg.style.display = 'block';
+                errorMsg.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+        
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{3})(\d{3})/, '($1) $2');
+            }
+            e.target.value = value;
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
