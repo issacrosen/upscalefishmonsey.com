@@ -758,9 +758,9 @@
                     
                     <div class="checkbox-section">
                         <div class="checkbox-group">
-                            <input type="checkbox" id="smsConsent" name="smsConsent" required>
+                            <input type="checkbox" id="smsConsent" name="smsConsent">
                             <label for="smsConsent">
-                                <strong>SMS Consent Required:</strong> By checking this box, I consent to receive promotional and transactional SMS messages from Upscale Fish Monsey. Message frequency may vary. Message and data rates may apply. Reply STOP to opt-out at any time. Reply HELP for help. Consent is not a condition of purchase.
+                                By checking this box, I consent to receive promotional and transactional SMS messages from Upscale Fish Monsey. Message frequency may vary. Message and data rates may apply. Reply STOP to opt-out at any time. Reply HELP for help. Consent is not a condition of purchase.
                                 <a href="/terms.html" target="_blank">Terms & Conditions</a> and 
                                 <a href="/privacy.html" target="_blank">Privacy Policy</a> apply.
                             </label>
@@ -857,10 +857,10 @@
                 return;
             }
             
-            if (!smsConsent) {
-                showError('SMS consent is required to receive text messages');
-                return;
-            }
+            // if (!smsConsent) {
+            //     showError('SMS consent is required to receive text messages');
+            //     return;
+            // }
             
             // Show loading state
             submitBtn.disabled = true;
